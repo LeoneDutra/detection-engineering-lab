@@ -1,0 +1,23 @@
+title: Example - Multiple Failed Logons From Single Source
+id: 00000000-0000-0000-0000-000000000000
+status: experimental
+description: Template rule. Detects many failed logons (4625) from one source IP.
+references:
+  - https://attack.mitre.org/techniques/T1110/
+author: Leone Dutra
+date: 2026-11-25
+tags:
+  - attack.credential-access
+  - attack.t1110
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+  condition: selection
+falsepositives:
+  - Users mistyping passwords
+  - Misconfigured service accounts
+level: medium
+# NOTE: aggregation (count by IpAddress > N within 5m) is done in the SIEM query.
