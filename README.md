@@ -2,6 +2,8 @@
 
 Sigma detection rules mapped to MITRE ATT&CK, each with sample logs, tests and known false positives, converted to KQL (Sentinel) and SPL (Splunk).
 
+> No real or sensitive data is included. Sample logs are generated in my [security-homelab](https://github.com/LeoneDutra/security-homelab).
+
 ## Roadmap
 
 - [ ] 10 Sigma rules, each with ATT&CK mapping, sample log, test and known FPs
@@ -13,6 +15,7 @@ Sigma detection rules mapped to MITRE ATT&CK, each with sample logs, tests and k
 ## Repository structure
 
 ```
+logs/            # generated lab logs used to develop and test rules
 rules/sigma/
 rules/kql/
 rules/spl/
